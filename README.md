@@ -8,7 +8,7 @@
 
 ## 代码仓库链接
 
-https://github.com/caosbad/blockchain-in-js-workshop-2021(示例用，请根据自身的仓库替换)
+https://github.com/1303-yzym/blockchain-in-js-workshop-2021
 
 
 
@@ -58,8 +58,8 @@ https://github.com/1303-yzym/blockchain-in-js-workshop-2021/tree/lesson1/src/mod
 
 
 ### 代码 commint 地址
+https://github.com/1303-yzym/blockchain-in-js-workshop-2021/tree/lesson2/src/models
 
-https://github.com/CUITBlockchain/blockchain-in-js-workshop-2021/commit/25f3a0d83a9fff2b4514c5503f470df939d0c2af
 
 
 ### 代码截图
