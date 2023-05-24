@@ -16,7 +16,7 @@ https://github.com/caosbad/blockchain-in-js-workshop-2021(示例用，请根据�
 
 
 ### 代码 commint 地址
-https://github.com/1303-yzym/blockchain-in-js-workshop-2021/edit/lesson1
+https://github.com/1303-yzym/blockchain-in-js-workshop-2021/tree/lesson1/src/models
 
 
 ### 代码截图
@@ -37,7 +37,7 @@ https://github.com/1303-yzym/blockchain-in-js-workshop-2021/edit/lesson1
 
 ### 代码 commint 地址
 
-https://github.com/1303-yzym/blockchain-in-js-workshop-2021/edit/lesson1
+https://github.com/1303-yzym/blockchain-in-js-workshop-2021/tree/lesson1/src/models
 
 
 ### 代码截图
