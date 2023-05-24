@@ -1,3 +1,6 @@
+// Blockchain
+
+
 class Blockchain {
   // 1. 完成构造函数及其参数
   /* 构造函数需要包含
@@ -14,6 +17,7 @@ class Blockchain {
 
 
   addBlock(block){
+
     //添加区块:主要是确定最后一位的区块
     //添加逻辑:新区块加入后,根据新加区块的preHash把前一的区块在lastBlock中删除
     let lastBlock = this.lastBlock[block.previousHash]
@@ -23,6 +27,10 @@ class Blockchain {
     }
     this.lastBlock[block.hash]=block
     delete this.lastBlock[block.previousHash]
+  }
+  _addBlock(block){//老师添加区块的时候用的方法名字叫做_addBlock，为了兼容前面的代码就直接这样操作了
+    this.blocks[block.hash]=block//将区块添加进定义好的block中
+    this.addBlock(block)
   }
 
   maxIndex(){
@@ -43,7 +51,16 @@ class Blockchain {
       return BlockBHash
     }
     let tempArr=this.lastBlock
-    return tempArr[blockAHash].index >tempArr[BlockBHash].index?blockAHash:BlockBHash
+    return tempArr[blockAHash].height >tempArr[BlockBHash].index?blockAHash:BlockBHash
+  }
+  containsBlock(block){
+    let blockHash=block.hash
+    for (let hash in this.blocks){
+      if (hash===blockHash){
+        return true
+      }
+    }
+    return false
   }
 
 
@@ -53,16 +70,16 @@ class Blockchain {
     let longestChain = [];
     let res = this.maxIndex()//获取到最长链上的最后一个区块
     let temp=res//从最长到第一个区块
-    let lastIndex=res.index
+    let lastIndex=res.height
     for (let i in res.blockChain.blocks) {//for循环,但不以i作为索引
-      if (!temp){break;}//如果temp不存在就返回
+      if (!temp||temp.height===0){break;}//如果temp不存在就返回
       longestChain[lastIndex]=temp
       lastIndex--;
       temp=res.blockChain.blocks[temp.previousHash]
     }
-    longestChain=longestChain.filter((s)=>{
+    longestChain= longestChain.filter( (s)=>{
       //删除空集,因为为undefined/null的元素不会进入过滤器
-      return s ;
+      return s;
     })
     return longestChain;//返回
   }
