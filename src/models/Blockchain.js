@@ -1,3 +1,6 @@
+// Blockchain
+
+
 class Blockchain {
   // 1. 完成构造函数及其参数
   /* 构造函数需要包含
@@ -43,7 +46,7 @@ class Blockchain {
       return BlockBHash
     }
     let tempArr=this.lastBlock
-    return tempArr[blockAHash].index >tempArr[BlockBHash].index?blockAHash:BlockBHash
+    return tempArr[blockAHash].height >tempArr[BlockBHash].index?blockAHash:BlockBHash
   }
 
 
@@ -53,16 +56,16 @@ class Blockchain {
     let longestChain = [];
     let res = this.maxIndex()//获取到最长链上的最后一个区块
     let temp=res//从最长到第一个区块
-    let lastIndex=res.index
+    let lastIndex=res.height
     for (let i in res.blockChain.blocks) {//for循环,但不以i作为索引
       if (!temp){break;}//如果temp不存在就返回
       longestChain[lastIndex]=temp
       lastIndex--;
       temp=res.blockChain.blocks[temp.previousHash]
     }
-    longestChain=longestChain.filter((s)=>{
+    longestChain= longestChain.filter( (s)=>{
       //删除空集,因为为undefined/null的元素不会进入过滤器
-      return s ;
+      return s;
     })
     return longestChain;//返回
   }
