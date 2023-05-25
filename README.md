@@ -2,7 +2,7 @@
 
 ## 小组成员
 
-- 2021131103-尹恒 （组长）
+- 2021131103-尹恒 
 
 
 
@@ -81,7 +81,7 @@ https://github.com/1303-yzym/blockchain-in-js-workshop-2021/tree/lesson2/src/mod
 
 ### 代码 commint 地址
 
-https://github.com/CUITBlockchain/blockchain-in-js-workshop-2021/commit/25f3a0d83a9fff2b4514c5503f470df939d0c2af
+https://github.com/1303-yzym/blockchain-in-js-workshop-2021/tree/lesson3/src/models
 
 
 ### 代码截图
